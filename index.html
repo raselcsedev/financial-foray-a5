@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Foray</title>
+    <!-- TAILWIND CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--STYLE CSS -->
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+    <!-- HEADER PART START-->
+    <header>
+        <h1 class="text-5xl font-bold text-center mt-8">Financial <span class="text-blue-700">Foray</span></h1>
+    </header>
+    <!-- HEADER PART FINISH -->
+
+    <!-- MAIN -->
+    <main>
+        <section>
+            <div class="grid lg:grid-cols-2 grid-cols-1 bg-color-green lg:gap-4">
+                
+                <!-- PROFILE PICTURE PART STRAT -->
+                <div class="m-5">
+                    <img class="h-full" src="./images/ujjivan-looks-to-hire-2000-people-for-small-finance-bank-foray.jpg" alt="">
+                </div>
+                <!-- PROFILE PICTURE PART FINISH -->
+
+                <!-- INCOME and EXPENSE PART START -->
+                <div class="bg-slate-300 m-5 p-5">
+                    <div>
+                        <h1 class="text-3xl text-center font-bold mb-5">Income
+                        </h1>
+                    </div>
+                    <div class="inline-flex mb-5 w-3/4 mx-e">
+                        <h3 class="text-1xl w-1/2 font-semibold text-center mx-e">Income:</h3>
+                        <input id="income-field" class="bg-color-grey px-2 font-semibold w-3/4 border rounded mx-auto" type="text" value="00">
+                    </div>
+                    <div id="notify-failed" class="notify-section rounded w-1/2 mx-auto">
+                        <p  class="notify text-red-600 text-center font-bold  rounded mx-e">❌ Please, Enter Number</p>
+                        
+                    </div>
+                    <div>
+                        <h1 class="text-3xl text-center font-bold mb-5 ">Expenses</h1>
+                    </div>
+                    <div class="inline-flex mb-5 w-3/4 container mx-auto">
+                        <h3 class="text-1xl w-1/2 font-semibold text-center mx-e">Food:</h3>
+                        <input id="food-field" class="bg-color-grey px-2 font-semibold w-3/4 border rounded mx-auto" type="text" value="00">
+                    </div>
+                    <div class="inline-flex mb-5 w-3/4 container mx-auto">
+                        <h3 class="text-1xl w-1/2 font-semibold text-center mx-e">Rent:</h3>
+                        <input id="rent-field" class="bg-color-grey px-2 font-semibold w-3/4 border rounded mx-auto" type="text" value="00">
+                    </div>
+                    <div class="inline-flex mb-5 w-3/4 container mx-auto">
+                        <h3 class="text-1xl w-1/2 font-semibold text-center mx-e">Cloth:</h3>
+                        <input id="cloth-field" class="bg-color-grey px-2 font-semibold w-3/4 border rounded mx-auto" type="text" value="00">
+                    </div>
+                    <div id="calculate-btn" class="lg:w-1/4 w-3/4 mx-auto" >
+                        <button class="border lg:w-full w-full px-10 rounded py-2  bg-blue-500 text-white font-semibold">Calculate</button>
+                    </div>
+                    <div>
+                        <h1 class="text-1xl text-center font-bold my-5">Total Expenses: <span id="total-expence">00</span></h1>
+                    </div>
+                    <div>
+                        <h1 class="text-1xl text-center font-bold my-5 ">Total Balance: <span id="total-balance">10000</span></h1>
+                    </div>
+                    <!-- INCOME and EXPENSE PART FINISH -->
+
+                    <!-- SAVINGS PART START -->
+                    <div class="inline-flex lg:w-full w-full lg:mx-auto mt-16 ">
+                            <h3 class="text-1xl mt-2 px-5 font-bold ">Savings:</h3>
+
+                            <input id="savings-input" class="bg-color-grey lg:w-3/4 w-3/4 px-2 mx-2 font-semibold border rounded" type="text" value="20">
+                            <h3 class="text-1xl mt-2 font-bold text-center">%</h3>
+
+                            <button id="savings-btn" class="border lg:w-3/4 w-1/4 rounded mx-2 px-5 py-2 bg-blue-500 text-white font-semibold">Save</button>   
+                    </div>
+                    <!-- SAVINGS PART FINISH -->
+
+                    <!-- SAVINGS ERROR MESSAGE -->
+                    <div id="failed" class="notify-section rounded w-1/2 mx-auto">
+                        <p  class="notify text-red-600 text-center font-bold  rounded mx-e">❌ Please, Positive number less than total balance</p>    
+                    </div>
+
+                    <!-- FINAL CALCULATION AFTER SAVINGS -->
+                    <div class="w-3/4 mx-auto">
+                        <h1  class="text-2xl text-center font-bold my-5 ">Savings Amount: <span id="savings-balance">00</span></h1>
+                    </div>
+                    <div class="w-3/4 mx-auto">
+                        <h1 class="text-2xl text-center font-bold my-5 ">Remainig Amount: <span id="remaining-balance">00</span></h1>
+                    </div>
+                    
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <script src="app.js"></script>
+    
+</body>
+</html>
